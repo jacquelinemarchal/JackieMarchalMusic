@@ -69,7 +69,7 @@ navBarTemplate.innerHTML =
                 </li>
                 <li class="logoContainer">
                     <a href="/home.html">
-                        <img width="130" class="logo" alt="Jackie Marchal logo" src="JM.svg"></img>
+                        <img width="130" class="logo" alt="Jackie Marchal logo" src="assets/JM.svg"></img>
                     </a>
                 </li>
                 <li>
@@ -83,7 +83,7 @@ navBarTemplate.innerHTML =
         <div id="mobileNavBar">
             <div id="mobileLogo">
                 <a href="/home.html">
-                    <img width="100" alt="Jackie Marchal 'JM' logo" src="JM.svg"></img>
+                    <img width="100" alt="Jackie Marchal 'JM' logo" src="assets/JM.svg"></img>
                 </a>
             </div>
             <ul id="mobileUl">

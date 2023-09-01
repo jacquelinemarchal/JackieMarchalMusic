@@ -62,3 +62,10 @@ img {
     bottom: 20px;
     position: fixed;
 }
+
+@media only screen and (max-width: 600px) {
+    .photoCredit {
+        left: 0;
+        text-align: center;
+    }
+}
