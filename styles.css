@@ -16,6 +16,10 @@ body {
     animation: transitionIn 1s;
 }
 
+.navTransition{
+    animation: transitionIn 500ms;
+}
+
 /* Home Page */
 #bgVideo { 
     position: absolute;
@@ -25,6 +29,22 @@ body {
     width: 100%; 
     height: 100%;
     object-fit: cover;
+}
+
+#mobileUl {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    list-style: none;
+}
+
+#mobileUl li{
+    padding: 8px 10px;
+}
+
+#mobileUl a{
+    color: #D6D9B6;
+    text-decoration: none;
 }
 
 /* Live Page */

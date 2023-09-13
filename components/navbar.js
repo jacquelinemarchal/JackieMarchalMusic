@@ -21,16 +21,6 @@ navBarTemplate.innerHTML =
             display: flex;
         }
 
-        #mobileUl {
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
-
-        #mobileUl li{
-            padding: 10px 0px;
-        }
-
         nav a{
             color: #D6D9B6;
             padding: 12px 16px;
