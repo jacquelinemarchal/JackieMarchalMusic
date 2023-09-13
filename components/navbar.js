@@ -18,9 +18,8 @@ navBarTemplate.innerHTML =
 
         #mobileLogo{
             width: 100%;
-            margin-top: 20px;
+            margin-top: 10px;
             display: flex;
-            justify-content: center;
         }
 
         #mobileUl {
@@ -83,7 +82,7 @@ navBarTemplate.innerHTML =
         <div id="mobileNavBar">
             <div id="mobileLogo">
                 <a href="/home.html">
-                    <img width="100" alt="Jackie Marchal 'JM' logo" src="assets/JM.svg"></img>
+                    <img width="80" alt="Jackie Marchal logo" src="assets/JackieMarchal.svg"></img>
                 </a>
             </div>
             <ul id="mobileUl">
