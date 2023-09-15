@@ -7,3 +7,8 @@ var toggleHamburger = () => {
         list.style.display = "none";
     }
 }
+
+var listen = document.getElementById("listen");
+listen.addEventListener("mouseover", (event) => {
+    console.log("hi")
+});
