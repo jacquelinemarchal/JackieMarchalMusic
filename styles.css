@@ -216,6 +216,15 @@ ul {
     }
 }
 
+@media only screen and (max-width: 415px){
+    .centerContainer{
+        text-align: center;
+    }
+    #mailIcon{
+        display: none;
+    }
+}
+
 hr {
     border: .01rem solid #d6d8b8;
     width: 60%;
