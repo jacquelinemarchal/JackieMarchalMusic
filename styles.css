@@ -68,7 +68,7 @@ ul {
 }
 
 #hamburger{
-    height: 20px; 
+    height: 30px; 
     position: fixed; 
     top: 25px; 
     right: 20px;
@@ -76,8 +76,10 @@ ul {
 }
 
 #mobileLogo{
-    width: 100%;
-    margin-top: 10px;
+    width: 100px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
 }
 
@@ -119,10 +121,12 @@ ul {
 
 /* Home Page */
 #bgVideo { 
-    position: absolute;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
     z-index: -1;
-    top: 0;
-    left: 0;
     width: 100%; 
     height: 100%;
     object-fit: cover;
