@@ -199,7 +199,8 @@ ul {
     margin-right: auto;
     border-radius: 2px;
     padding: 2px 10px;
-    width: 80%
+    width: 85%;
+    margin-bottom: 100px;
 }
 
 .centerContainer{
