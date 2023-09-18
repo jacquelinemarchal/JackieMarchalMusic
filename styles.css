@@ -165,7 +165,7 @@ ul {
     margin-left: auto;
     margin-right: auto;
     border-radius: 2px;
-    margin-top: 150px;
+    margin-top: 20%;
 }
 
 .photoCredit {
@@ -180,6 +180,9 @@ ul {
     .photoCredit {
         left: 0;
         text-align: center;
+    }
+    .showContainer{
+        margin-top: 70%;
     }
 }
 
