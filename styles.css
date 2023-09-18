@@ -213,6 +213,8 @@ ul {
     .bioContainer {
         margin-top: 150px;
         width: 84%;
+        overflow: scroll;
+        max-height: 60vh;
     }
 }
 
