@@ -70,16 +70,16 @@ ul {
 #hamburger{
     height: 30px; 
     position: fixed; 
-    top: 25px; 
+    top: 35px; 
     right: 20px;
     cursor: pointer;
 }
 
 #mobileLogo{
+    position: fixed;
     width: 100px;
-    margin-top: 20px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-top: 10px;
+    margin-left: 15px;
     display: flex;
 }
 
@@ -100,6 +100,7 @@ ul {
 #mobileUl a{
     color: #D6D9B6;
     text-decoration: none;
+    font-size: 18px;
 }
 
 @media only screen and (max-width: 600px) {
