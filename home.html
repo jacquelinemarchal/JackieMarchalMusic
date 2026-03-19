@@ -109,10 +109,11 @@
         </video> 
 
         <section class="newsletter">
-            <form action="#" method="post" onsubmit="return false;">
-                <label for="newsletterEmail" class="newsletterLabel">Join Newsletter:</label>
+            <form id="newsletterForm" action="https://script.google.com/macros/s/AKfycby8GbuGhgnjoBtb23okZUWvuCUkl4hffeF_zTj6hIsL2UeEKT6wbBRhGRdWuRqurYE3/exec" method="post">
+                <label for="newsletterEmail" class="newsletterLabel">Join Newsletter</label>
                 <div class="newsletterRow">
-                    <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" autocomplete="email" />
+                    <input type="hidden" name="token" value="wac5uxVMGN2+6mCPTfrQjcP88q5JznFy" />
+                    <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" autocomplete="email" required />
                     <button type="submit">join</button>
                 </div>
             </form>
