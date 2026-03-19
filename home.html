@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <head>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="/assets/JMBlack.svg">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 </head>
 <title>Jackie Marchal</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -107,6 +107,66 @@
         <video loop muted autoplay playsinline id="bgVideo" class="transition">
                 <source src="assets/rhubarb.mov" type="video/mp4">
         </video> 
+
+        <section class="newsletter">
+            <form id="newsletterForm" action="https://script.google.com/macros/s/AKfycby8GbuGhgnjoBtb23okZUWvuCUkl4hffeF_zTj6hIsL2UeEKT6wbBRhGRdWuRqurYE3/exec" method="post">
+                <label for="newsletterEmail" class="newsletterLabel">Join Newsletter</label>
+                <div class="newsletterRow">
+                    <!-- Honeypot field (bots tend to fill all fields) -->
+                    <input type="text" id="hpField" name="hpField" autocomplete="off" tabindex="-1" aria-hidden="true"
+                           style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;" />
+                    <input type="hidden" name="token" value="wac5uxVMGN2+6mCPTfrQjcP88q5JznFy" />
+
+                    <input type="email" id="newsletterEmail" name="email" placeholder="Enter your email here" autocomplete="email" required />
+                    <button type="submit">join</button>
+                </div>
+            </form>
+
+            <div id="newsletterStatus" class="newsletterStatus" aria-live="polite" style="margin-top:0.75rem;font-size:0.9rem;color:#d4d4d4;"></div>
+
+            <script>
+                (function () {
+                    const form = document.getElementById('newsletterForm');
+                    const status = document.getElementById('newsletterStatus');
+
+                    function setStatus(text) {
+                        status.textContent = text;
+                        status.style.color = '#D6D9B6';
+                    }
+
+                    form.addEventListener('submit', async (event) => {
+                        event.preventDefault();
+                        setStatus('Sending… stay here!', false);
+
+                        try {
+                            const response = await fetch(form.action, {
+                                method: 'POST',
+                                body: new FormData(form),
+                                mode: 'cors',
+                            });
+
+                            const data = await response.json().catch(() => null);
+
+                            if (!response.ok) {
+                                setStatus('Submission failed. Please try again.', true);
+                                return;
+                            }
+
+                            if (data && data.success) {
+                                setStatus(data.info || 'Thanks <3 You are subscribed', false);
+                                form.reset();
+                            } else {
+                                setStatus((data && data.error) || 'Something went wrong.', true);
+                            }
+                        } catch (err) {
+                            setStatus('Unable to submit (network error).', true);
+                        }
+                    });
+                })();
+            </script>
+
+        </section>
+
         <small class="photoCredit">From 
             <a target="_blank" href="https://youtu.be/-1aVw-dIgwc" style="color: #838571">
                 <i> Rhubarb Fields </i>
@@ -117,3 +177,5 @@
     <footer-component></footer-component>
 </body>
 </html>
+
+
