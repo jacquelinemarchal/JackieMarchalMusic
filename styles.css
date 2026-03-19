@@ -332,16 +332,6 @@ hr {
     margin-top: 0;
 }
 
-/* Newsletter modal */
-.modal {
-    position: fixed;
-    inset: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    z-index: 1000;
-}
 
 .modal.open {
     display: flex;

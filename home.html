@@ -112,7 +112,11 @@
             <form id="newsletterForm" action="https://script.google.com/macros/s/AKfycby8GbuGhgnjoBtb23okZUWvuCUkl4hffeF_zTj6hIsL2UeEKT6wbBRhGRdWuRqurYE3/exec" method="post">
                 <label for="newsletterEmail" class="newsletterLabel">Join Newsletter</label>
                 <div class="newsletterRow">
+                    <!-- Honeypot field (bots tend to fill all fields) -->
+                    <input type="text" id="hpField" name="hpField" autocomplete="off" tabindex="-1" aria-hidden="true"
+                           style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;" />
                     <input type="hidden" name="token" value="wac5uxVMGN2+6mCPTfrQjcP88q5JznFy" />
+
                     <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" autocomplete="email" required />
                     <button type="submit">join</button>
                 </div>
