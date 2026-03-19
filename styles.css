@@ -112,6 +112,14 @@ ul {
     font-size: 18px;
 }
 
+/* Temporarily hide writing/live nav items */
+#navUl > li:nth-child(2),
+#navUl > li:nth-child(5),
+#mobileUl > li:nth-child(2),
+#mobileUl > li:nth-child(4) {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
     #webNavBar {
         display: none;
@@ -282,13 +290,23 @@ ul {
     .newsletter {
         position: absolute;
         top: 190px;
-        left: 2rem;
-        right: 2rem;
-        transform: none;
+        left: 50%;
+        transform: translateX(-50%);
         margin: 0;
-        width: auto;
-        max-width: 420px;
+        width: min(420px, calc(100vw - 1rem));
+        max-width: none;
+        box-sizing: border-box;
+        overflow: hidden;
         z-index: 2;
+    }
+
+    #newsletterForm {
+        overflow: hidden;
+    }
+
+    .cf-turnstile {
+        max-width: 100%;
+        overflow: hidden;
     }
 }
 
