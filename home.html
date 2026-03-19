@@ -117,10 +117,54 @@
                            style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;" />
                     <input type="hidden" name="token" value="wac5uxVMGN2+6mCPTfrQjcP88q5JznFy" />
 
-                    <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" autocomplete="email" required />
+                    <input type="email" id="newsletterEmail" name="email" placeholder="Enter your email here" autocomplete="email" required />
                     <button type="submit">join</button>
                 </div>
             </form>
+
+            <div id="newsletterStatus" class="newsletterStatus" aria-live="polite" style="margin-top:0.75rem;font-size:0.9rem;color:#d4d4d4;"></div>
+
+            <script>
+                (function () {
+                    const form = document.getElementById('newsletterForm');
+                    const status = document.getElementById('newsletterStatus');
+
+                    function setStatus(text) {
+                        status.textContent = text;
+                        status.style.color = '#D6D9B6';
+                    }
+
+                    form.addEventListener('submit', async (event) => {
+                        event.preventDefault();
+                        setStatus('Sending… stay here!', false);
+
+                        try {
+                            const response = await fetch(form.action, {
+                                method: 'POST',
+                                body: new FormData(form),
+                                mode: 'cors',
+                            });
+
+                            const data = await response.json().catch(() => null);
+
+                            if (!response.ok) {
+                                setStatus('Submission failed. Please try again.', true);
+                                return;
+                            }
+
+                            if (data && data.success) {
+                                setStatus(data.info || 'Thanks <3 You are subscribed', false);
+                                form.reset();
+                            } else {
+                                setStatus((data && data.error) || 'Something went wrong.', true);
+                            }
+                        } catch (err) {
+                            setStatus('Unable to submit (network error).', true);
+                        }
+                    });
+                })();
+            </script>
+
         </section>
 
         <small class="photoCredit">From 

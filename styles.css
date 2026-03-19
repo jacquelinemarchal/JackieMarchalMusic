@@ -172,6 +172,13 @@ ul {
     text-align: center;
 }
 
+.newsletterStatus {
+    font-family: "Judson";
+    font-size: 1.1rem;
+    color: #D6D9B6;
+    margin-top: 0.75rem;
+}
+
 .newsletterRow {
     display: flex;
     align-items: stretch;
@@ -190,7 +197,7 @@ ul {
     background: transparent;
     color: #D6D9B6;
     font-family: "Judson";
-    font-size: 1rem;
+    font-size: 1.1rem;
     box-sizing: border-box;
 }
 
@@ -202,7 +209,7 @@ ul {
     background: rgba(214, 217, 182, 0.12);
     color: #D6D9B6;
     font-family: "Judson";
-    font-size: 1rem;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: background 180ms ease, transform 180ms ease;
 }
@@ -379,7 +386,7 @@ hr {
 }
 
 #newsletterForm label {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
 }
 
 #newsletterForm input[type="email"] {
@@ -406,7 +413,7 @@ hr {
 }
 
 .newsletterStatus {
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: #b0b0b0;
     min-height: 1.2rem;
 }
