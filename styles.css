@@ -267,6 +267,22 @@ ul {
     .showContainer{
         margin-top: 70%;
     }
+
+    main {
+        min-height: 100vh;
+    }
+
+    .newsletter {
+        position: absolute;
+        top: 190px;
+        left: 2rem;
+        right: 2rem;
+        transform: none;
+        margin: 0;
+        width: auto;
+        max-width: 420px;
+        z-index: 2;
+    }
 }
 
 /* Bio Page */
