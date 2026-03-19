@@ -142,6 +142,89 @@ ul {
     object-fit: cover;
 }
 
+.newsletter {
+    position: relative;
+    max-width: 420px;
+    margin: 2.5rem auto 1rem;
+    padding: 1.1rem 1.2rem;
+    background: rgba(0, 0, 0, 0.65);
+    border: 1px solid rgba(214, 217, 182, 0.65);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 0 1px rgba(214, 217, 182, 0.15);
+}
+
+.visuallyHidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+.newsletter label {
+    display: block;
+    font-family: "Judson";
+    font-size: 1.1rem;
+    color: #D6D9B6;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.newsletterRow {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    border: 1px solid rgba(214, 217, 182, 0.6);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+.newsletter input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    padding: 0.8rem 1rem;
+    background: transparent;
+    color: #D6D9B6;
+    font-family: "Judson";
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.newsletter button {
+    flex: 0 0 auto;
+    padding: 0 1.1rem;
+    border: none;
+    border-left: 1px solid rgba(214, 217, 182, 0.4);
+    background: rgba(214, 217, 182, 0.12);
+    color: #D6D9B6;
+    font-family: "Judson";
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 180ms ease, transform 180ms ease;
+}
+
+.newsletter button:hover {
+    background: rgba(214, 217, 182, 0.24);
+    transform: translateY(-1px);
+}
+
+.newsletter button:active {
+    transform: translateY(0);
+}
+
+.newsletter input::placeholder {
+    color: rgba(214, 217, 182, 0.65);
+}
+
+.newsletter input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(214, 217, 182, 0.4);
+}
+
 /* Live Page */
 #coverImg {
     position: absolute;
