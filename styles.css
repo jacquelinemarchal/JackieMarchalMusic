@@ -31,6 +31,11 @@ body {
 
 /* Nav Bar*/
 
+nav {
+    position: relative;
+    z-index: 20;
+}
+
 ul {
     list-style: none;
 }
@@ -288,8 +293,8 @@ ul {
     }
 
     .newsletter {
-        position: absolute;
-        top: 190px;
+        position: fixed;
+        top: 155px;
         left: 50%;
         transform: translateX(-50%);
         margin: 0;
@@ -297,7 +302,7 @@ ul {
         max-width: none;
         box-sizing: border-box;
         overflow: hidden;
-        z-index: 2;
+        z-index: 10;
     }
 
     #newsletterForm {
