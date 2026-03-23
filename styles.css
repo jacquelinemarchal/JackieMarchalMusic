@@ -420,6 +420,7 @@ ul {
     border: 1px solid rgba(214, 217, 182, 0.55);
     color: #D6D9B6;
     box-sizing: border-box;
+     border-radius: 4px;
 }
 
 .albumSection {
@@ -440,6 +441,7 @@ ul {
     transition: background-color 180ms ease, border-color 180ms ease;
     margin: 0;
     box-sizing: border-box;
+    border-radius: 4px;
 }
 
 .albumButton:hover {
@@ -517,6 +519,7 @@ ul {
         padding: 1.2rem;
         max-height: calc(100vh - 20vh - 80px);
         overflow-y: auto;
+         border-radius: 4px;
     }
 
     .lyricsPage {
@@ -543,6 +546,7 @@ ul {
         font-size: 1.2rem;
         font-weight: 300;
         padding: 0.65rem 0.9rem;
+         border-radius: 4px;
     }
 
     .albumSongs li {
