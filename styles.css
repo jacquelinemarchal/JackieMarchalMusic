@@ -259,19 +259,6 @@ ul {
     box-shadow: 0 0 0 2px rgba(214, 217, 182, 0.4);
 }
 
-.homeFeatureCard {
-    position: relative;
-    width: min(460px, calc(100vw - 3rem));
-    margin: 1.6rem auto 7rem;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.62);
-    border: 1px solid rgba(214, 217, 182, 0.5);
-    border-radius: 10px;
-    box-shadow: 0 0 0 1px rgba(214, 217, 182, 0.1), 0 14px 32px rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(1.5px);
-    box-sizing: border-box;
-}
-
 .homeVideoSection {
     position: relative;
     width: 30%;
@@ -581,15 +568,14 @@ ul {
     }
 
     .newsletter {
-        width: 100%;
+        position: fixed;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: min(420px, calc(100vw - 1rem));
         max-width: none;
         overflow: hidden;
-    }
-
-    .homeFeatureCard {
-        width: min(460px, calc(100vw - 1rem));
-        margin: 10.2rem auto 7.5rem;
-        padding: 0.8rem;
+        z-index: 10;
     }
 
     .homeVideoSection {
