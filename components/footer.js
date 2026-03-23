@@ -39,6 +39,11 @@ footerTemplate.innerHTML =
                 <animate attributeName="fill" values="rgb(25, 30, 26);#D6D9B6;rgb(25, 30, 26)" dur="7s" repeatCount="indefinite" />
             </svg>
         </a>
+        <a target="_blank" href="https://www.youtube.com/@jackiemarchal">
+            <svg xmlns="http://www.w3.org/2000/svg" class="socialIcon" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.61C458.918 64 288 64 288 64S117.082 64 74.629 75.473c-23.497 6.334-42.003 24.96-48.284 48.61C16 166.837 16 256 16 256s0 89.163 10.345 131.917c6.281 23.65 24.787 42.276 48.284 48.61C117.082 448 288 448 288 448s170.918 0 213.371-11.473c23.497-6.334 42.003-24.96 48.284-48.61C560 345.163 560 256 560 256s0-89.163-10.345-131.917zM232 336V176l142 80-142 80z"/>
+                <animate attributeName="fill" values="rgb(25, 30, 26);#D6D9B6;rgb(25, 30, 26)" dur="7s" repeatCount="indefinite" />
+            </svg>
+        </a>
     </footer>`;
 
 // Construct Footer class 
