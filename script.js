@@ -42,4 +42,10 @@ var toggleAlbum = (button) => {
     else{
         songList.style.display = "none";
     }
+
+    if (typeof window.syncPoemColumns === "function") {
+        requestAnimationFrame(() => {
+            window.syncPoemColumns();
+        });
+    }
 };

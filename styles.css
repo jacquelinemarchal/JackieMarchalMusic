@@ -460,25 +460,42 @@ ul {
 .poemsPage .poemGrid {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     gap: 2.5rem;
 }
 
 .poemsPage .poemColumn {
-    flex: 1;
+    flex: 0 0 auto;
+    width: fit-content;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
 }
 
-.poemsPage .poemColumnLeft .albumButton,
-.poemsPage .poemColumnLeft .albumSongs li,
-.poemsPage .poemColumnLeft .sampleLyrics {
+.poemsPage .poemColumnLeft {
+    align-items: flex-end;
+}
+
+.poemsPage .poemColumnRight {
+    align-items: flex-start;
+}
+
+.poemsPage .poemCard {
+    width: fit-content;
+    max-width: 100%;
+}
+
+.poemsPage .poemCard .albumButton {
+    width: auto;
+}
+
+.poemsPage .poemColumnLeft .albumButton {
     text-align: right;
 }
 
 .poemsPage .poemColumnRight .albumButton,
-.poemsPage .poemColumnRight .albumSongs li,
-.poemsPage .poemColumnRight .sampleLyrics {
+.poemsPage .poemCard .albumSongs li,
+.poemsPage .poemCard .sampleLyrics {
     text-align: left;
 }
 
@@ -595,6 +612,7 @@ ul {
     }
 
     .poemsPage .poemCard {
+        width: auto;
         margin-bottom: 1rem;
     }
 
@@ -603,9 +621,9 @@ ul {
     }
 
     .poemsPage .poemColumnLeft .albumButton,
+    .poemsPage .poemColumnRight .albumButton,
     .poemsPage .poemColumnLeft .albumSongs li,
     .poemsPage .poemColumnLeft .sampleLyrics,
-    .poemsPage .poemColumnRight .albumButton,
     .poemsPage .poemColumnRight .albumSongs li,
     .poemsPage .poemColumnRight .sampleLyrics {
         text-align: left;
