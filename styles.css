@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
+
 /* Transitions */
 @keyframes transitionIn {
     from {
@@ -441,6 +443,7 @@ ul {
     border: none;
     background: transparent;
     text-align: left;
+    text-shadow: 0 1px 3px rgba(17, 34, 85, 0.45);
 }
 
 .poemCard .albumSongs {
@@ -455,6 +458,26 @@ ul {
 .poemsPage .lyricsContainer {
     background: transparent;
     border: none;
+    margin: 0 auto;
+    height: 100%;
+    max-height: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 1rem;
+}
+
+.poemsPage {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.poemsPage main {
+    position: fixed;
+    top: 210px;
+    right: 0;
+    bottom: 110px;
+    left: 0;
+    overflow: hidden;
 }
 
 .poemsPage .poemGrid {
@@ -487,6 +510,9 @@ ul {
 
 .poemsPage .poemCard .albumButton {
     width: auto;
+    font-family: "Lora", Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    line-height: 1.25;
 }
 
 .poemsPage .poemColumnLeft .albumButton {
@@ -497,6 +523,14 @@ ul {
 .poemsPage .poemCard .albumSongs li,
 .poemsPage .poemCard .sampleLyrics {
     text-align: left;
+}
+
+.poemsPage .poemCard .albumSongs li,
+.poemsPage .poemCard .sampleLyrics {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.08rem;
+    line-height: 1.78;
+    color: rgba(214, 217, 182, 0.9);
 }
 
 .albumSection {
@@ -598,6 +632,11 @@ ul {
          border-radius: 4px;
     }
 
+    .poemsPage main {
+        top: 170px;
+        bottom: 110px;
+    }
+
     .poemGrid {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -627,6 +666,16 @@ ul {
     .poemsPage .poemColumnRight .albumSongs li,
     .poemsPage .poemColumnRight .sampleLyrics {
         text-align: left;
+    }
+
+    .poemsPage .poemCard .albumButton {
+        font-size: 1.2rem;
+    }
+
+    .poemsPage .poemCard .albumSongs li,
+    .poemsPage .poemCard .sampleLyrics {
+        font-size: 1rem;
+        line-height: 1.68;
     }
 
     .lyricsPage {
