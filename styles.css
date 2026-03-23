@@ -460,9 +460,32 @@ ul {
     margin: 0 auto;
     height: 100%;
     max-height: none;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(56, 28, 43, 0.22) transparent;
+    padding-left: 10px;
     padding-bottom: 1rem;
+}
+
+.poemsPage .lyricsContainer::-webkit-scrollbar {
+    width: 10px;
+}
+
+.poemsPage .lyricsContainer::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 12px;
+}
+
+.poemsPage .lyricsContainer::-webkit-scrollbar-thumb {
+    background: rgba(56, 28, 43, 0.22);
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+
+.poemsPage .lyricsContainer::-webkit-scrollbar-thumb:hover {
+    background: rgba(56, 28, 43, 0.36);
 }
 
 .poemsPage .writingPageTitle {
@@ -633,6 +656,116 @@ ul {
     color: #381c2b;
 }
 
+.lyricsPage {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.lyricsPageMain {
+    position: fixed;
+    top: 210px;
+    right: 0;
+    bottom: 110px;
+    left: 0;
+    overflow: hidden;
+}
+
+.lyricsPage .lyricsContainer {
+    width: min(400px, calc(100vw - 2rem));
+    background: transparent;
+    border: none;
+    margin: 0 auto;
+    height: 100%;
+    max-height: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(56, 28, 43, 0.22) transparent;
+    padding-left: 10px;
+    padding-bottom: 1rem;
+}
+
+.lyricsPage .lyricsContainer::-webkit-scrollbar {
+    width: 10px;
+}
+
+.lyricsPage .lyricsContainer::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 12px;
+}
+
+.lyricsPage .lyricsContainer::-webkit-scrollbar-thumb {
+    background: rgba(56, 28, 43, 0.22);
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+
+.lyricsPage .lyricsContainer::-webkit-scrollbar-thumb:hover {
+    background: rgba(56, 28, 43, 0.36);
+}
+
+.lyricsPage .writingPageTitle {
+    color: #381c2b;
+}
+
+.lyricsPage .lyricsCredit,
+.lyricsPage .lyricsCreditNames {
+    color: rgba(56, 28, 43, 0.75);
+}
+
+.lyricsPage .albumSection {
+    margin: 1.15rem 0;
+}
+
+.lyricsPage .albumButton {
+    width: auto;
+    padding: 0.2rem 0;
+    border: none;
+    background: transparent;
+    text-align: center;
+    color: #381c2b;
+    font-family: "Lora", Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    line-height: 1.25;
+}
+
+.lyricsPage .albumButton:hover {
+    background: transparent;
+    border-color: transparent;
+}
+
+.lyricsPage .albumSongs {
+    background: rgba(229, 206, 206, 0.32);
+}
+
+.lyricsPage .albumSongs li {
+    color: #381c2b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    line-height: 1.74;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.lyricsPage .albumSongs li h4 {
+    color: #381c2b;
+    font-family: "Lora", Georgia, "Times New Roman", serif;
+    font-size: 1.18rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+.lyricsPage .sampleLyrics {
+    color: rgba(56, 28, 43, 0.9);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.94rem;
+    line-height: 1.74;
+    text-align: center;
+}
+
 .albumSection {
     margin: 1.25rem 0;
 }
@@ -781,24 +914,37 @@ ul {
         line-height: 1.68;
     }
 
-    .lyricsPage {
-        height: 100vh;
-        overflow: hidden;
-    }
-
     .lyricsPageMain {
-        position: fixed;
-        top: 170px;
-        right: 0;
+        top: 110px;
         bottom: 110px;
-        left: 0;
-        overflow: hidden;
     }
 
     .lyricsPageMain .lyricsContainer {
-        max-height: 65vh;
+        height: 70%;
+        max-height: none;
         margin-top: 0;
         overflow-y: auto;
+    }
+
+    .lyricsPage .albumButton {
+        color: #381c2b;
+        font-size: 1.25rem;
+    }
+
+    .lyricsPage .albumSongs li {
+        color: #381c2b;
+        font-size: 0.95rem;
+    }
+
+    .lyricsPage .albumSongs li h4 {
+        color: #381c2b;
+        font-size: 1.08rem;
+    }
+
+    .lyricsPage .sampleLyrics {
+        color: rgba(56, 28, 43, 0.9);
+        font-size: 0.9rem;
+        line-height: 1.62;
     }
 
     .albumButton {
