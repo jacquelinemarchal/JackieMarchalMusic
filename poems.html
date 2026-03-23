@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script src="components/footer.js" type="text/javascript" defer></script>
 <script src="script.js" type="text/javascript" defer></script>
-<body>
+<body class="poemsPage">
     <nav>
         <div id="webNavBar">
             <ul id="navUl">
@@ -100,9 +100,129 @@
     <main>
         <div class="lyricsContainer transition">
             <h1 class="writingPageTitle">poems</h1>
-            <p class="writingPageText">This page is ready for poems, excerpts, or readings. Add the first piece whenever you are ready.</p>
+            <div class="poemGrid">
+                <div class="poemCard">
+                    <h2 class="albumButton" onclick="toggleAlbum(this)">What I Really Want</h2>
+                    <ul class="albumSongs" style="display: none;">
+                        <li><p class="sampleLyrics">sample / sample / sample</p></li>
+                    </ul>
+                </div>
+                <div class="poemCard">
+                    <h2 class="albumButton" onclick="toggleAlbum(this)">How to Return a Used CD</h2>
+                    <ul class="albumSongs" style="display: none;">
+                        <li><p class="sampleLyrics">sample / sample / sample</p></li>
+                    </ul>
+                </div>
+                <div class="poemCard">
+                    <h2 class="albumButton" onclick="toggleAlbum(this)">More, more</h2>
+                    <ul class="albumSongs" style="display: none;">
+                        <li><p class="sampleLyrics">sample / sample / sample</p></li>
+                    </ul>
+                </div>
+                <div class="poemCard">
+                    <h2 class="albumButton" onclick="toggleAlbum(this)">Pendulum</h2>
+                    <ul class="albumSongs" style="display: none;">
+                        <li><p class="sampleLyrics">sample / sample / sample</p></li>
+                    </ul>
+                </div>
+                <div class="poemCard">
+                    <h2 class="albumButton" onclick="toggleAlbum(this)">I've lived in California Too ...</h2>
+                    <ul class="albumSongs" style="display: none;">
+                        <li><p class="sampleLyrics">sample / sample / sample</p></li>
+                    </ul>
+                </div>
+                <div class="poemCard">
+                    <h2 class="albumButton" onclick="toggleAlbum(this)">Gathering</h2>
+                    <ul class="albumSongs" style="display: none;">
+                        <li><p class="sampleLyrics">sample / sample / sample</p></li>
+                    </ul>
+                </div>
+                <div class="poemCard">
+                    <h2 class="albumButton" onclick="toggleAlbum(this)">Coming Home</h2>
+                    <ul class="albumSongs" style="display: none;">
+                        <li><p class="sampleLyrics">sample / sample / sample</p></li>
+                    </ul>
+                </div>
+                <div class="poemCard">
+                    <h2 class="albumButton" onclick="toggleAlbum(this)">Incomprehensible</h2>
+                    <ul class="albumSongs" style="display: none;">
+                        <li><p class="sampleLyrics">sample / sample / sample</p></li>
+                    </ul>
+                </div>
+                <div class="poemCard">
+                    <h2 class="albumButton" onclick="toggleAlbum(this)">Nora</h2>
+                    <ul class="albumSongs" style="display: none;">
+                        <li><p class="sampleLyrics">sample / sample / sample</p></li>
+                    </ul>
+                </div>
+                <div class="poemCard">
+                    <h2 class="albumButton" onclick="toggleAlbum(this)">I love you</h2>
+                    <ul class="albumSongs" style="display: none;">
+                        <li><p class="sampleLyrics">sample / sample / sample</p></li>
+                    </ul>
+                </div>
+                <div class="poemCard">
+                    <h2 class="albumButton" onclick="toggleAlbum(this)">Surgery in the Spring</h2>
+                    <ul class="albumSongs" style="display: none;">
+                        <li><p class="sampleLyrics">sample / sample / sample</p></li>
+                    </ul>
+                </div>
+                <div class="poemCard">
+                    <h2 class="albumButton" onclick="toggleAlbum(this)">1079</h2>
+                    <ul class="albumSongs" style="display: none;">
+                        <li><p class="sampleLyrics">sample / sample / sample</p></li>
+                    </ul>
+                </div>
+                <div class="poemCard">
+                    <h2 class="albumButton" onclick="toggleAlbum(this)">Knowing</h2>
+                    <ul class="albumSongs" style="display: none;">
+                        <li><p class="sampleLyrics">sample / sample / sample</p></li>
+                    </ul>
+                </div>
+                <div class="poemCard">
+                    <h2 class="albumButton" onclick="toggleAlbum(this)">To Be Grass at the Airport</h2>
+                    <ul class="albumSongs" style="display: none;">
+                        <li><p class="sampleLyrics">sample / sample / sample</p></li>
+                    </ul>
+                </div>
+                <div class="poemCard">
+                    <h2 class="albumButton" onclick="toggleAlbum(this)">Always the present</h2>
+                    <ul class="albumSongs" style="display: none;">
+                        <li><p class="sampleLyrics">sample / sample / sample</p></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (!document.body.classList.contains("poemsPage")) return;
+
+            const poemGrid = document.querySelector(".poemGrid");
+            if (!poemGrid || poemGrid.dataset.columnsReady === "true") return;
+
+            const cards = Array.from(poemGrid.querySelectorAll(":scope > .poemCard"));
+            if (!cards.length) return;
+
+            const leftCol = document.createElement("div");
+            leftCol.className = "poemColumn poemColumnLeft";
+
+            const rightCol = document.createElement("div");
+            rightCol.className = "poemColumn poemColumnRight";
+
+            cards.forEach((card, index) => {
+                if (index % 2 === 0) {
+                    leftCol.appendChild(card);
+                } else {
+                    rightCol.appendChild(card);
+                }
+            });
+
+            poemGrid.appendChild(leftCol);
+            poemGrid.appendChild(rightCol);
+            poemGrid.dataset.columnsReady = "true";
+        });
+    </script>
     <footer-component></footer-component>
 </body>
 </html>

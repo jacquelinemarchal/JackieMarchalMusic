@@ -414,13 +414,72 @@ ul {
 
 .lyricsContainer {
     width: min(1200px, calc(100vw - 2rem));
-    margin: 5vh auto 4rem;
-    padding: 1.5rem;
+    margin: 0 auto;
     background: rgba(0, 0, 0, 0.45);
     border: 1px solid rgba(214, 217, 182, 0.55);
     color: #D6D9B6;
     box-sizing: border-box;
      border-radius: 4px;
+}
+
+.poemGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.poemCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.poemCard .albumButton {
+    font-size: 1.4rem;
+    padding: 0.2rem 0;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    text-align: left;
+}
+
+.poemCard .albumSongs {
+    border-radius: 0 0 4px 4px;
+}
+
+.poemCard .albumButton:hover {
+    background: transparent;
+    border-color: transparent;
+}
+
+.poemsPage .lyricsContainer {
+    background: transparent;
+    border: none;
+}
+
+.poemsPage .poemGrid {
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+.poemsPage .poemColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.poemsPage .poemColumnLeft .albumButton,
+.poemsPage .poemColumnLeft .albumSongs li,
+.poemsPage .poemColumnLeft .sampleLyrics {
+    text-align: right;
+}
+
+.poemsPage .poemColumnRight .albumButton,
+.poemsPage .poemColumnRight .albumSongs li,
+.poemsPage .poemColumnRight .sampleLyrics {
+    text-align: left;
 }
 
 .albumSection {
@@ -520,6 +579,36 @@ ul {
         max-height: calc(100vh - 20vh - 80px);
         overflow-y: auto;
          border-radius: 4px;
+    }
+
+    .poemGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .poemsPage .poemGrid {
+        display: block;
+    }
+
+    .poemsPage .poemColumn {
+        display: block;
+    }
+
+    .poemsPage .poemCard {
+        margin-bottom: 1rem;
+    }
+
+    .poemsPage .poemCard:last-child {
+        margin-bottom: 0;
+    }
+
+    .poemsPage .poemColumnLeft .albumButton,
+    .poemsPage .poemColumnLeft .albumSongs li,
+    .poemsPage .poemColumnLeft .sampleLyrics,
+    .poemsPage .poemColumnRight .albumButton,
+    .poemsPage .poemColumnRight .albumSongs li,
+    .poemsPage .poemColumnRight .sampleLyrics {
+        text-align: left;
     }
 
     .lyricsPage {
