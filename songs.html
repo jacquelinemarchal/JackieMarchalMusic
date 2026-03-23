@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script src="components/footer.js" type="text/javascript" defer></script>
 <script src="script.js" type="text/javascript" defer></script>
-<body>
+<body class="lyricsPage">
     <nav>
         <div id="webNavBar">
             <ul id="navUl">
@@ -97,7 +97,11 @@
     <video loop muted autoplay playsinline id="bgVideo" class="transition">
             <source src="assets/sunset.mov" type="video/mp4">
     </video>
-    <main>       <div class="lyricsContainer transition">           <h1 class="writingPageTitle">lyrics</h1>           <p class="lyricsCredit">All songs written by me unless otherwise noted</p>           <div class="albumSection">
+    <main class="lyricsPageMain">
+        <div class="lyricsContainer transition">
+            <h1 class="writingPageTitle">lyrics</h1>
+            <p class="lyricsCredit">All songs written by me unless otherwise noted</p>
+            <div class="albumSection">
                 <h2 class="albumButton" onclick="toggleAlbum(this)">The Girl The World Forgot</h2>
                 <ul class="albumSongs" style="display: none;">
                     <li><h4>Excavate the Girl</h4><p class="sampleLyrics">I'm less afraid and you know it

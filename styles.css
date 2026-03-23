@@ -460,15 +460,40 @@ ul {
     .writingPageContainer {
         margin-top: 28vh;
         padding: 1.2rem;
+        max-height: calc(100vh - 28vh - 80px);
+        overflow-y: auto;
     }
 
     .lyricsContainer {
-        margin-top: 28vh;
+        margin-top: 20vh;
         padding: 1.2rem;
+        max-height: calc(100vh - 20vh - 80px);
+        overflow-y: auto;
+    }
+
+    .lyricsPage {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .lyricsPageMain {
+        position: fixed;
+        top: 170px;
+        right: 0;
+        bottom: 110px;
+        left: 0;
+        overflow: hidden;
+    }
+
+    .lyricsPageMain .lyricsContainer {
+        max-height: 65vh;
+        margin-top: 0;
+        overflow-y: auto;
     }
 
     .albumButton {
         font-size: 1.2rem;
+        font-weight: 300;
         padding: 0.65rem 0.9rem;
     }
 
@@ -478,7 +503,16 @@ ul {
     }
 
     .albumSongs li h4 {
-        font-size: 0.95rem;
+        font-size: 1.18rem;
+        letter-spacing: 0.02em;
+        color: #e8ebc8;
+        margin-bottom: 0.35rem;
+    }
+
+    .sampleLyrics {
+        font-size: 0.88rem;
+        line-height: 1.55;
+        color: rgba(214, 217, 182, 0.72);
     }
 
     main {
