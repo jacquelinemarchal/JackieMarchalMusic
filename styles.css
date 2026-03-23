@@ -342,6 +342,22 @@ ul {
     text-align: center;
 }
 
+.lyricsCredit {
+    margin: -0.5rem 0 1.5rem 0;
+    font-family: "Judson", serif;
+    font-size: 0.8rem;
+    color: rgba(214, 217, 182, 0.6);
+    text-align: center;
+}
+
+.lyricsCreditNames {
+    margin: .5rem 0;
+    font-family: "Judson", serif;
+    font-size: 0.8rem;
+    color: rgba(214, 217, 182, 0.6);
+    font-style: italic;
+}
+
 .writingPageText {
     margin: 0;
     font-size: 1.1rem;
