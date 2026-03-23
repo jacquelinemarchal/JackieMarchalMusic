@@ -469,6 +469,97 @@ ul {
     color: #381c2b;
 }
 
+/* Poem password gate */
+#poemGate {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+#poemGateBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: min(480px, calc(100vw - 2rem));
+    text-align: center;
+}
+
+#poemGateMessage {
+    font-family: "Lora", Georgia, serif;
+    font-size: 1.05rem;
+    color: rgba(214, 217, 182, 0.85);
+    margin: 0 0 0.5rem;
+    line-height: 1.65;
+}
+
+#poemGateMessage a {
+    color: #D6D9B6;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+#poemGateLabel {
+    font-family: "Lora", Georgia, serif;
+    font-size: 1.1rem;
+    color: rgba(214, 217, 182, 0.8);
+    margin: 0;
+}
+
+#poemGateRow {
+    display: flex;
+    border: 1px solid rgba(214, 217, 182, 0.45);
+    border-radius: 6px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+#poemGateInput {
+    border: none;
+    background: transparent;
+    padding: 0.6rem 0.9rem;
+    color: #D6D9B6;
+    font-family: "Judson", serif;
+    font-size: 1rem;
+    outline: none;
+    width: 160px;
+}
+
+#poemGateInput::placeholder {
+    color: rgba(214, 217, 182, 0.4);
+    letter-spacing: 0.15em;
+}
+
+#poemGateBtn {
+    border: none;
+    border-left: 1px solid rgba(214, 217, 182, 0.35);
+    background: rgba(214, 217, 182, 0.1);
+    color: #D6D9B6;
+    font-family: "Judson", serif;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    transition: background 150ms ease;
+}
+
+#poemGateBtn:hover {
+    background: rgba(214, 217, 182, 0.22);
+}
+
+#poemGateError {
+    font-family: "Judson", serif;
+    font-size: 0.85rem;
+    color: rgba(214, 140, 140, 0.85);
+    margin: 0;
+    min-height: 1.1em;
+}
+
 .poemsSubtitle {
     font-size: .9rem;
     color: rgba(56, 28, 43, 0.75);

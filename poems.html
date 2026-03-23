@@ -11,6 +11,17 @@
 <script src="components/footer.js" type="text/javascript" defer></script>
 <script src="script.js" type="text/javascript" defer></script>
 <body class="poemsPage">
+    <div id="poemGate">
+        <div id="poemGateBox">
+            <p id="poemGateMessage">omg, you want to read my poems! I fear you must sign up for my newsletter to get the super-secret password to read them :) If you haven't done so already, <a href="/home.html">go ahead</a> and I will send you an email with all the info you need. Or DM me, or just call me. Hi mom &lt;3</p>
+            <p id="poemGateLabel">enter password</p>
+            <div id="poemGateRow">
+                <input id="poemGateInput" type="password" autocomplete="off" placeholder="••••••">
+                <button id="poemGateBtn" onclick="checkPoemPassword()">enter</button>
+            </div>
+            <p id="poemGateError"></p>
+        </div>
+    </div>
     <nav>
         <div id="webNavBar">
             <ul id="navUl">
@@ -393,6 +404,35 @@ Until I see you again</p></li>
         </div>
     </main>
     <script>
+        (function () {
+            const POEM_PW = "thekeytomyheart";
+            const gate = document.getElementById("poemGate");
+
+            function unlock() {
+                sessionStorage.setItem("poemsUnlocked", "1");
+                gate.style.display = "none";
+            }
+
+            if (sessionStorage.getItem("poemsUnlocked") === "1") {
+                gate.style.display = "none";
+            }
+
+            window.checkPoemPassword = function () {
+                const val = document.getElementById("poemGateInput").value;
+                if (val === POEM_PW) {
+                    unlock();
+                } else {
+                    const err = document.getElementById("poemGateError");
+                    err.textContent = "incorrect password";
+                    document.getElementById("poemGateInput").value = "";
+                }
+            };
+
+            document.getElementById("poemGateInput").addEventListener("keydown", function (e) {
+                if (e.key === "Enter") window.checkPoemPassword();
+            });
+        })();
+
         document.addEventListener("DOMContentLoaded", () => {
             if (!document.body.classList.contains("poemsPage")) return;
 
