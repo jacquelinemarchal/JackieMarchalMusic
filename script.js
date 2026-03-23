@@ -33,3 +33,13 @@ mobileListen.addEventListener("click", () => {
         mobileDropdown.style.display = "block";
     }
 });
+
+var toggleAlbum = (button) => {
+    var songList = button.nextElementSibling;
+    if (songList.style.display == "none"){
+        songList.style.display = "block";
+    }
+    else{
+        songList.style.display = "none";
+    }
+};
