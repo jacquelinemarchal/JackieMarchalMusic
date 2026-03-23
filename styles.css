@@ -443,7 +443,7 @@ ul {
     border: none;
     background: transparent;
     text-align: left;
-    text-shadow: 0 1px 3px rgba(17, 34, 85, 0.45);
+    color: #381c2b;
 }
 
 .poemCard .albumSongs {
@@ -464,6 +464,16 @@ ul {
     overflow-y: auto;
     overflow-x: hidden;
     padding-bottom: 1rem;
+}
+
+.poemsPage .writingPageTitle {
+    color: #381c2b;
+}
+
+.poemsSubtitle {
+    font-size: .9rem;
+    color: rgba(56, 28, 43, 0.75);
+    text-align: center;
 }
 
 .poemsPage {
@@ -528,9 +538,9 @@ ul {
 .poemsPage .poemCard .albumSongs li,
 .poemsPage .poemCard .sampleLyrics {
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.08rem;
+    font-size: 1rem;
     line-height: 1.78;
-    color: rgba(214, 217, 182, 0.9);
+    color: #381c2b;
 }
 
 .albumSection {
@@ -563,8 +573,7 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(214, 217, 182, 0.3);
+    background: rgba(229, 206, 206, 0.4);
     border-top: none;
 }
 
