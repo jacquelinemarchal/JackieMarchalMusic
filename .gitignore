@@ -2,5 +2,8 @@
 logs
 *.log
 
+scott.mov
+
+
 # Dependency directories
 node_modules/
