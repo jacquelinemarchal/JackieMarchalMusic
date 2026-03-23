@@ -54,7 +54,7 @@ ul {
     color: #D6D9B6;
     text-decoration: none;
     font-size: 22px;
-    font-family: "Judson", serif;
+ font-family: "Lora", Georgia, serif;
     padding-right: 4px;
 }
 
@@ -347,7 +347,7 @@ ul {
     border-radius: 16px;
     color: #D6D9B6;
     text-decoration: none;
-    font-family: "Judson", serif;
+ font-family: "Lora", Georgia, serif;
     font-size: 1.4rem;
     text-transform: lowercase;
     transition: background-color 180ms ease, transform 180ms ease, border-color 180ms ease;
@@ -383,7 +383,7 @@ ul {
 
 .writingPageTitle {
     margin: 0 0 1rem;
-    font-family: "Judson", serif;
+ font-family: "Lora", Georgia, serif;
     font-size: 2.25rem;
     font-weight: normal;
     color: #D6D9B6;
@@ -392,7 +392,7 @@ ul {
 
 .lyricsCredit {
     margin: -0.5rem 0 1.5rem 0;
-    font-family: "Judson", serif;
+ font-family: "Lora", Georgia, serif;
     font-size: 0.8rem;
     color: rgba(214, 217, 182, 0.6);
     text-align: center;
@@ -400,7 +400,7 @@ ul {
 
 .lyricsCreditNames {
     margin: .5rem 0;
-    font-family: "Judson", serif;
+ font-family: "Lora", Georgia, serif;
     font-size: 0.8rem;
     color: rgba(214, 217, 182, 0.6);
     font-style: italic;
@@ -525,7 +525,7 @@ ul {
     background: transparent;
     padding: 0.6rem 0.9rem;
     color: #D6D9B6;
-    font-family: "Judson", serif;
+ font-family: "Lora", Georgia, serif;
     font-size: 1rem;
     outline: none;
     width: 160px;
@@ -541,7 +541,7 @@ ul {
     border-left: 1px solid rgba(214, 217, 182, 0.35);
     background: rgba(214, 217, 182, 0.1);
     color: #D6D9B6;
-    font-family: "Judson", serif;
+ font-family: "Lora", Georgia, serif;
     font-size: 1rem;
     padding: 0.6rem 1rem;
     cursor: pointer;
@@ -553,7 +553,7 @@ ul {
 }
 
 #poemGateError {
-    font-family: "Judson", serif;
+ font-family: "Lora", Georgia, serif;
     font-size: 0.85rem;
     color: rgba(214, 140, 140, 0.85);
     margin: 0;
@@ -644,7 +644,7 @@ ul {
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(214, 217, 182, 0.5);
     color: #D6D9B6;
-    font-family: "Judson", serif;
+ font-family: "Lora", Georgia, serif;
     font-size: 1.5rem;
     text-align: center;
     cursor: pointer;
@@ -670,14 +670,14 @@ ul {
 .albumSongs li {
     padding: 0.6rem 1.5rem;
     color: #D6D9B6;
-    font-family: "Judson", serif;
+ font-family: "Lora", Georgia, serif;
     font-size: 0.95rem;
     border-bottom: 1px solid rgba(214, 217, 182, 0.15);
 }
 
 .albumSongs li h4 {
     margin: 0 0 0.5rem 0;
-    font-family: "Judson", serif;
+ font-family: "Lora", Georgia, serif;
     font-size: 1.3rem;
     font-weight: normal;
     color: #D6D9B6;
@@ -685,7 +685,7 @@ ul {
 
 .sampleLyrics {
     margin: 0 0 0.5rem 0;
-    font-family: "Judson", serif;
+ font-family: "Lora", Georgia, serif;
     font-size: 0.95rem;
     color: rgba(214, 217, 182, 0.75);
     line-height: 1.6;
