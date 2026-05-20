@@ -121,11 +121,8 @@ ul {
     font-size: 18px;
 }
 
-/* Temporarily hide writing/live nav items */
-#navUl > li:nth-child(2),
-#navUl > li:nth-child(5),
-#mobileUl > li:nth-child(2),
-#mobileUl > li:nth-child(4) {
+/* Hide writing on mobile menu (desktop nav no longer includes it) */
+#mobileUl > li:nth-child(2) {
     display: none;
 }
 
@@ -302,17 +299,6 @@ ul {
     border: 0;
 }
 
-/* Live Page */
-#coverImg {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%;
-    object-fit: cover;
-}
-
 .showText {
     text-align: center;
     font-size: 20px;
@@ -326,6 +312,199 @@ ul {
     margin-right: auto;
     border-radius: 2px;
     margin-top: 20%;
+}
+
+.watchPage .watchMain {
+    padding-top: 0.5rem;
+}
+
+.youtubeShowcase {
+    position: relative;
+    z-index: 1;
+    background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(214, 217, 182, 0.08) 0%, transparent 55%), #000;
+    padding: 3rem 1.5rem 4rem;
+}
+
+.watchPage .youtubeShowcase {
+    padding-top: 4.5rem;
+    padding-bottom: 6rem;
+}
+
+.watchMore {
+    text-align: center;
+    margin: 2.5rem 0 0;
+    font-family: "Lora", Georgia, serif;
+    font-size: clamp(1.35rem, 3.5vw, 1.85rem);
+}
+
+.watchMore a {
+    color: #D6D9B6;
+    text-decoration: none;
+}
+
+.watchMore a:hover {
+    text-decoration: underline;
+}
+
+.youtubeShowcaseTitle {
+    font-family: "Lora", Georgia, serif;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 500;
+    color: #D6D9B6;
+    text-align: center;
+    text-transform: lowercase;
+    margin: 0 0 0.5rem;
+    letter-spacing: 0.02em;
+}
+
+.youtubeShowcaseIntro {
+    text-align: center;
+    max-width: 36rem;
+    margin: 0 auto 2.5rem;
+    font-size: 0.95rem;
+    color: rgba(214, 217, 182, 0.75);
+    line-height: 1.5;
+}
+
+.ytInlineCode {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.88em;
+    color: rgba(214, 217, 182, 0.95);
+    background: rgba(214, 217, 182, 0.12);
+    padding: 0.12em 0.4em;
+    border-radius: 4px;
+}
+
+.youtubeGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 601px) {
+    .youtubeGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.ytCard {
+    margin: 0;
+    min-width: 0;
+}
+
+.ytCardTitle {
+    font-family: "Lora", Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #D6D9B6;
+    margin: 0.65rem 0 0;
+    text-align: center;
+}
+
+.ytCardTitle a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ytCardTitle a:hover {
+    text-decoration: underline;
+}
+
+.ytCardCredit {
+    font-family: "Judson", serif;
+    font-size: 0.85rem;
+    color: rgba(214, 217, 182, 0.6);
+    margin: -0.35rem 0 0.65rem;
+}
+
+.ytFacade {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 0;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.ytFacade:hover,
+.ytFacade:focus-visible {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+.ytFacade:focus-visible {
+    outline: 2px solid rgba(214, 217, 182, 0.65);
+    outline-offset: 4px;
+}
+
+.ytFacade img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ytFacadeShade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.55) 100%);
+    pointer-events: none;
+    transition: opacity 200ms ease;
+}
+
+.ytFacade:hover .ytFacadeShade,
+.ytFacade:focus-visible .ytFacadeShade {
+    opacity: 0.85;
+}
+
+.ytFacadePlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: rgba(214, 217, 182, 0.92);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+    transition: transform 200ms ease, background 200ms ease;
+}
+
+.ytFacadePlay::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-40%, -50%);
+    border-style: solid;
+    border-width: 0.65em 0 0.65em 1.1em;
+    border-color: transparent transparent transparent #1a1a1a;
+}
+
+.ytFacade:hover .ytFacadePlay,
+.ytFacade:focus-visible .ytFacadePlay {
+    transform: translate(-50%, -50%) scale(1.08);
+    background: #D6D9B6;
+}
+
+.ytFrameInner {
+    position: absolute;
+    inset: 0;
+    background: #000;
+}
+
+.ytFrameInner iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .photoCredit {
@@ -648,6 +827,7 @@ ul {
 .poemsPage .poemColumn {
     flex: 0 0 auto;
     width: fit-content;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
@@ -664,6 +844,48 @@ ul {
 .poemsPage .poemCard {
     width: fit-content;
     max-width: 100%;
+    min-width: 0;
+}
+
+.poemsPage .poemCard .albumSongs {
+    width: 26rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    border-radius: 1px;
+    overflow: hidden;
+}
+
+.poemsPage .poemCard .albumSongs li {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.poemsPage .poemCard .albumSongs .sampleLyrics {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.poemsPage .poemProse .sampleLyrics {
+    white-space: normal;
+}
+
+.poemsPage .poemProse .sampleLyrics + .sampleLyrics {
+    margin-top: 1.1em;
+}
+
+.poemSeason {
+    margin: 0 0 0.5rem;
+    font-family: "Lora", Georgia, serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    letter-spacing: 0.04em;
+    color: rgba(56, 28, 43, 0.55);
+    text-transform: none;
 }
 
 .poemsPage .poemCard .albumButton {
