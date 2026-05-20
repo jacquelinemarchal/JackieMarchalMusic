@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Lora:wght@400;500;600&display=swap');
 
 /* Transitions */
 @keyframes transitionIn {
@@ -50,12 +50,13 @@ ul {
     justify-content: space-evenly;
 }
 
-#webNavBar a{
+#navUl > li > a {
     color: #D6D9B6;
     text-decoration: none;
     font-size: 22px;
- font-family: "Lora", Georgia, serif;
+    font-family: "Lora", Georgia, serif;
     padding-right: 4px;
+    letter-spacing: 0.06em;
 }
 
 #webNavBar li{
@@ -115,10 +116,11 @@ ul {
     padding: 8px 10px;
 }
 
-#mobileUl a{
+#mobileUl > li > a {
     color: #D6D9B6;
     text-decoration: none;
     font-size: 18px;
+    letter-spacing: 0.06em;
 }
 
 /* Hide writing on mobile menu (desktop nav no longer includes it) */
@@ -669,6 +671,7 @@ ul {
 }
 
 .poemsPage .lyricsContainer {
+    font-family: "EB Garamond", Garamond, "Times New Roman", serif;
     background: transparent;
     border: none;
     margin: 0 auto;
@@ -703,98 +706,15 @@ ul {
 }
 
 .poemsPage .writingPageTitle {
+    font-family: "Lora", Georgia, serif;
+    font-size: 2.25rem;
+    font-weight: normal;
+    letter-spacing: 0.06em;
     color: #381c2b;
 }
 
-/* Poem password gate */
-#poemGate {
-    position: fixed;
-    inset: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.72);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-}
-
-#poemGateBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    max-width: min(480px, calc(100vw - 2rem));
-    text-align: center;
-}
-
-#poemGateMessage {
-    font-family: "Lora", Georgia, serif;
-    font-size: 1.05rem;
-    color: rgba(214, 217, 182, 0.85);
-    margin: 0 0 0.5rem;
-    line-height: 1.65;
-}
-
-#poemGateMessage a {
-    color: #D6D9B6;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-}
-
-#poemGateLabel {
-    font-family: "Lora", Georgia, serif;
-    font-size: 1.1rem;
-    color: rgba(214, 217, 182, 0.8);
-    margin: 0;
-}
-
-#poemGateRow {
-    display: flex;
-    border: 1px solid rgba(214, 217, 182, 0.45);
-    border-radius: 6px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.06);
-}
-
-#poemGateInput {
-    border: none;
-    background: transparent;
-    padding: 0.6rem 0.9rem;
-    color: #D6D9B6;
- font-family: "Lora", Georgia, serif;
-    font-size: 1rem;
-    outline: none;
-    width: 160px;
-}
-
-#poemGateInput::placeholder {
-    color: rgba(214, 217, 182, 0.4);
-    letter-spacing: 0.15em;
-}
-
-#poemGateBtn {
-    border: none;
-    border-left: 1px solid rgba(214, 217, 182, 0.35);
-    background: rgba(214, 217, 182, 0.1);
-    color: #D6D9B6;
- font-family: "Lora", Georgia, serif;
-    font-size: 1rem;
-    padding: 0.6rem 1rem;
-    cursor: pointer;
-    transition: background 150ms ease;
-}
-
-#poemGateBtn:hover {
-    background: rgba(214, 217, 182, 0.22);
-}
-
-#poemGateError {
- font-family: "Lora", Georgia, serif;
-    font-size: 0.85rem;
-    color: rgba(214, 140, 140, 0.85);
-    margin: 0;
-    min-height: 1.1em;
+.poemsSubtitle{
+    letter-spacing: 0.06em;
 }
 
 .poemsSubtitle {
@@ -878,21 +798,25 @@ ul {
     margin-top: 1.1em;
 }
 
-.poemSeason {
+.poemsPage .poemSeason {
     margin: 0 0 0.5rem;
-    font-family: "Lora", Georgia, serif;
+    font-family: "DM Mono", ui-monospace, monospace;
     font-size: 0.75rem;
-    font-style: italic;
-    letter-spacing: 0.04em;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.08em;
     color: rgba(56, 28, 43, 0.55);
     text-transform: none;
 }
 
 .poemsPage .poemCard .albumButton {
     width: auto;
-    font-family: "Lora", Georgia, "Times New Roman", serif;
-    font-size: 1.2rem;
-    line-height: 1.25;
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: 0.06em;
+    text-transform: none;
 }
 
 .poemsPage .poemColumnLeft .albumButton {
@@ -907,9 +831,11 @@ ul {
 
 .poemsPage .poemCard .albumSongs li,
 .poemsPage .poemCard .sampleLyrics {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1rem;
-    line-height: 1.78;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0.015em;
     color: #381c2b;
 }
 
@@ -1178,7 +1104,7 @@ ul {
     }
 
     .poemsPage .poemCard .albumButton {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
     }
 
     .poemsPage .poemCard .albumButton {
