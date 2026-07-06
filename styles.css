@@ -1596,6 +1596,7 @@ hr {
     margin: 0;
     justify-self: start;
     align-self: center;
+    max-width: min(68vw, 460px);
 }
 
 .memoryAside__text {
@@ -1623,6 +1624,38 @@ hr {
     margin: 1rem 0;
     width: 100%;
     padding: 0;
+}
+
+.memoryBvpGrid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(1rem, 2.5vw, 1.75rem);
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.memoryBvpGrid__stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.memoryBvpGrid .memoryPhoto,
+.memoryBvpGrid__tall {
+    margin: 0;
+    max-width: 100%;
+}
+
+.memoryBvpGrid__tall {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.memoryBvpGrid__tall img {
+    width: auto;
+    max-width: 100%;
 }
 
 .memoryPhoto {
@@ -1867,6 +1900,10 @@ body.memoryLightbox-open {
         gap: 1.5rem;
     }
 
+    .memoryAside .memoryPhoto {
+        max-width: calc(100vw - 2rem);
+    }
+
     .memorySpread--photo-left,
     .memorySpread--photo-right {
         flex-direction: column;
@@ -1917,6 +1954,14 @@ body.memoryLightbox-open {
         width: 100%;
         padding: 0;
         flex-wrap: wrap;
+    }
+
+    .memoryBvpGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .memoryBvpGrid__tall img {
+        max-height: none;
     }
 
     .memoryRow--homePair .memoryPhoto:first-child,
