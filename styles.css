@@ -1395,7 +1395,12 @@ hr {
 }
 
 .memoryPage p {
-    color: rgba(56, 28, 43, 0.88);
+    font-family: "EB Garamond", Garamond, "Times New Roman", serif;
+    font-size: clamp(1.12rem, 2.3vw, 1.32rem);
+    line-height: 1.78;
+    letter-spacing: 0.012em;
+    color: rgba(56, 28, 43, 0.9);
+    text-indent: 1.5em;
 }
 
 .memoryPage #navUl > li > a,
@@ -1425,12 +1430,49 @@ hr {
     max-width: 1140px;
     margin: 0 auto;
     padding: 7rem clamp(0.75rem, 2vw, 1.25rem) 10rem;
+    padding-top: 0;
     box-sizing: border-box;
 }
 
 .memoryHeader {
     text-align: center;
-    margin-bottom: 3rem;
+}
+
+
+.memoryList {
+    list-style: none;
+    margin: 0.75rem 0 1.25rem;
+    padding: 0 0 0 2rem;
+}
+
+.memoryList li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 0.45rem;
+    font-family: "EB Garamond", Garamond, "Times New Roman", serif;
+    font-size: clamp(1.12rem, 2.3vw, 1.32rem);
+    line-height: 1.78;
+    letter-spacing: 0.012em;
+    color: rgba(56, 28, 43, 0.9);
+}
+
+.memoryList li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.42em;
+    width: 0.95rem;
+    padding-top:7px;
+    height: 0.95rem;
+    background: url("assets/memory/spiral.png") center / contain no-repeat;
+}
+
+.memoryIntro p {
+    margin: 0 0 0.5rem;
+}
+
+.memoryIntro p:last-child {
+    margin-bottom: 0;
 }
 
 .memoryTitle {
@@ -1439,7 +1481,32 @@ hr {
     font-size: clamp(2rem, 5vw, 2.75rem);
     font-weight: 400;
     letter-spacing: 0.08em;
-    text-transform: lowercase;
+    color: #381c2b;
+}
+
+.memorySectionHeading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 0 2rem;
+}
+
+.memorySectionHeading__spiral {
+    display: block;
+    width: 1.35rem;
+    height: auto;
+    opacity: 0.9;
+    flex-shrink: 0;
+}
+
+.memorySectionTitle {
+    margin: 0;
+    font-family: "Lora", Georgia, serif;
+    font-size: clamp(1.35rem, 3vw, 1.65rem);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-align: center;
     color: #381c2b;
 }
 
@@ -1457,12 +1524,13 @@ hr {
     line-height: 1.78;
     letter-spacing: 0.012em;
     color: rgba(56, 28, 43, 0.9);
+    text-indent: 1.5em;
 }
 
 .memorySpread {
     display: flex;
     align-items: center;
-    gap: clamp(1.5rem, 4vw, 3rem);
+    gap: clamp(2rem, 5vw, 4rem);
     margin: 3rem -50px;
     width: calc(100% + 100px);
     padding: 0 50px;
@@ -1478,22 +1546,30 @@ hr {
 }
 
 .memorySpread__text {
-    flex: 1 1 38%;
-    min-width: 12rem;
+    flex: 1 1 40%;
+    min-width: 0;
+    max-width: 40%;
+    padding-right: 0.5rem;
 }
 
 .memorySpread__text .memoryParagraph {
-    margin: 0 0 1.25rem;
-}
-
-.memorySpread__text .memoryParagraph:last-child {
-    margin-bottom: 0;
+    margin: 0;
+    max-width: 100%;
 }
 
 .memorySpread .memoryPhoto {
     flex: 0 1 auto;
     margin: 0;
-    max-width: 58%;
+    max-width: 52%;
+    align-self: center;
+}
+
+.memorySpread .memoryPhoto--left,
+.memorySpread .memoryPhoto--right,
+.memorySpread .memoryPhoto--hero {
+    margin-left: 0;
+    margin-right: 0;
+    align-self: center;
 }
 
 .memorySpread .memoryPhoto--portrait {
@@ -1506,6 +1582,28 @@ hr {
 
 .memorySpread--carmelita .memoryPhoto {
     max-width: min(68%, 680px);
+}
+
+.memoryAside {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: clamp(1.75rem, 4vw, 3.5rem);
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.memoryAside .memoryPhoto {
+    margin: 0;
+    justify-self: start;
+    align-self: center;
+}
+
+.memoryAside__text {
+    align-self: center;
+}
+
+.memoryAside__text .memoryParagraph {
+    margin: 0;
 }
 
 .memoryGroup {
@@ -1614,6 +1712,20 @@ hr {
 
 .memoryRow--offset {
     padding-left: calc(12% + 50px);
+}
+
+.memoryRow--homePair {
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+}
+
+.memoryRow--homePair .memoryPhoto:first-child {
+    margin-left: -3.5rem;
+}
+
+.memoryRow--homePair .memoryPhoto:last-child {
+    margin-left: auto;
 }
 
 .memoryCluster {
@@ -1732,16 +1844,16 @@ body.memoryLightbox-open {
 
 @media only screen and (max-width: 700px) {
     .memoryMain {
-        padding: 5.5rem 1rem 8rem;
+        padding: 0rem 1rem 8rem;
     }
-
     .memoryParagraph {
         margin: 2rem 0;
     }
 
     .memorySpread,
     .memoryCluster,
-    .memoryGroup {
+    .memoryGroup,
+    .memoryAside {
         flex-direction: column;
         margin-left: 0;
         margin-right: 0;
@@ -1749,9 +1861,20 @@ body.memoryLightbox-open {
         padding: 0;
     }
 
+    .memoryAside {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
     .memorySpread--photo-left,
     .memorySpread--photo-right {
         flex-direction: column;
+    }
+
+    .memorySpread__text {
+        max-width: 100%;
+        padding-right: 0;
     }
 
     .memorySpread .memoryPhoto,
@@ -1785,6 +1908,7 @@ body.memoryLightbox-open {
 
     .memoryRow,
     .memoryRow--offset,
+    .memoryRow--homePair,
     .memoryGroup .memoryRow {
         flex-direction: column;
         align-items: center;
@@ -1792,6 +1916,12 @@ body.memoryLightbox-open {
         margin-right: 0;
         width: 100%;
         padding: 0;
+        flex-wrap: wrap;
+    }
+
+    .memoryRow--homePair .memoryPhoto:first-child,
+    .memoryRow--homePair .memoryPhoto:last-child {
+        margin-left: 0;
     }
 
     .memoryCluster {
