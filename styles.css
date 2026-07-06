@@ -1584,6 +1584,14 @@ hr {
     max-width: min(68%, 680px);
 }
 
+.memorySpread--solo {
+    justify-content: center;
+}
+
+.memorySpread--solo .memoryPhoto {
+    max-width: min(64vw, 440px);
+}
+
 .memoryAside {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
@@ -1761,6 +1769,17 @@ hr {
     margin-left: auto;
 }
 
+.memoryRow--coronaPair {
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+}
+
+.memoryRow--coronaPair .memoryPhoto {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .memoryCluster {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -1794,6 +1813,13 @@ hr {
     margin: 5rem auto 0;
     padding-top: 3rem;
     border-top: 1px solid rgba(56, 28, 43, 0.12);
+}
+
+.memoryCredits {
+    margin: 3rem 0 0;
+    text-align: center;
+    text-indent: 0;
+    color: rgba(56, 28, 43, 0.75);
 }
 
 .memoryZineTitle {
@@ -1946,6 +1972,7 @@ body.memoryLightbox-open {
     .memoryRow,
     .memoryRow--offset,
     .memoryRow--homePair,
+    .memoryRow--coronaPair,
     .memoryGroup .memoryRow {
         flex-direction: column;
         align-items: center;
