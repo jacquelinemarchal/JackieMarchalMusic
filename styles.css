@@ -1612,7 +1612,33 @@ hr {
 }
 
 .memorySpread--carmelita .memoryPhoto {
-    max-width: min(68%, 680px);
+    max-width: min(58%, 560px);
+}
+
+.memorySpread--centered {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: min(920px, 100%);
+    padding: 0;
+}
+
+.memorySpread--duboce {
+    max-width: 100%;
+    justify-content: space-between;
+    gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.memorySpread--duboce .memorySpread__text {
+    flex: 1 1 58%;
+    max-width: 60%;
+}
+
+.memorySpread--duboce .memoryPhoto,
+.memorySpread--duboce .memoryPhoto--portrait {
+    flex: 0 0 auto;
+    margin-left: auto;
+    max-width: min(34vw, 400px);
 }
 
 .memorySpread--solo {
@@ -1743,6 +1769,10 @@ hr {
     max-width: min(96vw, 770px);
     margin-top: 3rem;
     margin-bottom: 3rem;
+}
+
+.memoryPhoto--hero-lg {
+    max-width: min(98vw, 1000px);
 }
 
 .memoryPhoto--left {
