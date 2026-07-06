@@ -66,6 +66,7 @@
     <main class="memoryMain">
         <header class="memoryHeader memoryReveal">
             <h1 class="memoryTitle">In the Time it's Taken to Write This, it's Become a Memory</h1>
+            <a href="#memoryZine" class="memorySkipToZine">click to skip to zine</a>
         </header>
 
         <div class="memoryFlow">
@@ -289,7 +290,7 @@
             <p class="memoryCredits">Concept and Words by Jackie Marchal, Photos by Jill Pasewark</p>
         </div>
 
-        <section class="memoryZine memoryReveal" aria-label="zine">
+        <section class="memoryZine memoryReveal" id="memoryZine" aria-label="zine">
             <div class="memorySectionHeading memoryReveal">
                 <img src="assets/memory/spiral.png" alt="" class="memorySectionHeading__spiral" aria-hidden="true">
                 <h3 class="memorySectionTitle">Digitized Accompanying Zine</h3>
@@ -362,6 +363,28 @@
             document.addEventListener('keydown', (event) => {
                 if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
                     closeLightbox();
+                }
+            });
+
+            const skipToZine = document.querySelector('.memorySkipToZine');
+            const zineSection = document.getElementById('memoryZine');
+            const scrollRoot = document.querySelector('.memoryMain');
+
+            skipToZine?.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (!zineSection) {
+                    return;
+                }
+
+                const mobileScroll = window.matchMedia('(max-width: 700px)').matches;
+                if (mobileScroll && scrollRoot) {
+                    const offset =
+                        zineSection.getBoundingClientRect().top -
+                        scrollRoot.getBoundingClientRect().top +
+                        scrollRoot.scrollTop;
+                    scrollRoot.scrollTo({ top: offset, behavior: 'smooth' });
+                } else {
+                    zineSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         })();
