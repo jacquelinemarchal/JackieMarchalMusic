@@ -1559,30 +1559,6 @@ hr {
     color: #381c2b;
 }
 
-.memorySkipToZine {
-    display: inline-block;
-    margin-top: 1.35rem;
-    padding: 0;
-    border: none;
-    background: transparent;
-    color: rgba(56, 28, 43, 0.88);
-    font-family: "EB Garamond", Garamond, "Times New Roman", serif;
-    font-size: clamp(0.98rem, 2.1vw, 1.08rem);
-    letter-spacing: 0.05em;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 180ms ease, opacity 180ms ease;
-}
-
-.memorySkipToZine:hover {
-    color: #381c2b;
-    opacity: 0.85;
-}
-
-.memorySkipToZine:active {
-    opacity: 1;
-}
-
 .memorySectionHeading {
     display: flex;
     align-items: center;
@@ -1942,7 +1918,6 @@ hr {
     margin: 5rem auto 0;
     padding-top: 3rem;
     border-top: 1px solid rgba(56, 28, 43, 0.12);
-    scroll-margin-top: 1.5rem;
 }
 
 .memoryCredits {
