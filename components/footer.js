@@ -69,6 +69,14 @@ class Footer extends HTMLElement {
                 animate.setAttribute('values', '#381c2b;#5a3348;#381c2b');
             });
         }
+        if (this.getAttribute('layout') === 'inline') {
+            const footer = content.querySelector('footer');
+            footer.style.position = 'static';
+            footer.style.height = 'auto';
+            footer.style.left = '0';
+            footer.style.padding = '2.5rem 0 1rem';
+            footer.style.marginTop = '1rem';
+        }
         shadowRoot.appendChild(content);
     }
 }
