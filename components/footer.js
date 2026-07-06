@@ -60,7 +60,16 @@ class Footer extends HTMLElement {
 
     connectedCallback() {
         const shadowRoot = this.attachShadow({ mode: 'closed' });
-        shadowRoot.appendChild(footerTemplate.content);
+        const content = footerTemplate.content.cloneNode(true);
+        if (this.getAttribute('theme') === 'dark') {
+            content.querySelectorAll('.socialIcon path').forEach((path) => {
+                path.setAttribute('fill', '#381c2b');
+            });
+            content.querySelectorAll('.socialIcon animate').forEach((animate) => {
+                animate.setAttribute('values', '#381c2b;#5a3348;#381c2b');
+            });
+        }
+        shadowRoot.appendChild(content);
     }
 }
 

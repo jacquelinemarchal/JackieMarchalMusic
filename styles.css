@@ -1387,3 +1387,428 @@ hr {
     color: #b0b0b0;
     min-height: 1.2rem;
 }
+
+/* Memory Page */
+.memoryPage {
+    background: #faf9f7;
+    color: #381c2b;
+}
+
+.memoryPage p {
+    color: rgba(56, 28, 43, 0.88);
+}
+
+.memoryPage #navUl > li > a,
+.memoryPage #mobileUl > li > a,
+.memoryPage #webListen,
+.memoryPage #mobileListen,
+.memoryPage #hamburger {
+    color: #381c2b;
+}
+
+.memoryPage #navUl > li > a svg,
+.memoryPage #mobileUl > li > a svg {
+    fill: #381c2b;
+}
+
+.memoryPage .dropdownMenu {
+    background-color: rgba(250, 249, 247, 0.95);
+    opacity: 1;
+    border: 1px solid rgba(56, 28, 43, 0.12);
+}
+
+.memoryPage .dropdownMenu a {
+    color: #381c2b;
+}
+
+.memoryMain {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 7rem clamp(0.75rem, 2vw, 1.25rem) 10rem;
+    box-sizing: border-box;
+}
+
+.memoryHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.memoryTitle {
+    margin: 0;
+    font-family: "Lora", Georgia, serif;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: lowercase;
+    color: #381c2b;
+}
+
+.memoryFlow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.memoryParagraph {
+    max-width: 100%;
+    margin: 2.5rem 0;
+    font-family: "EB Garamond", Garamond, "Times New Roman", serif;
+    font-size: clamp(1.12rem, 2.3vw, 1.32rem);
+    line-height: 1.78;
+    letter-spacing: 0.012em;
+    color: rgba(56, 28, 43, 0.9);
+}
+
+.memorySpread {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    margin: 3rem -50px;
+    width: calc(100% + 100px);
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.memorySpread--photo-right {
+    flex-direction: row;
+}
+
+.memorySpread--photo-left {
+    flex-direction: row-reverse;
+}
+
+.memorySpread__text {
+    flex: 1 1 38%;
+    min-width: 12rem;
+}
+
+.memorySpread__text .memoryParagraph {
+    margin: 0 0 1.25rem;
+}
+
+.memorySpread__text .memoryParagraph:last-child {
+    margin-bottom: 0;
+}
+
+.memorySpread .memoryPhoto {
+    flex: 0 1 auto;
+    margin: 0;
+    max-width: 58%;
+}
+
+.memorySpread .memoryPhoto--portrait {
+    max-width: min(48%, 420px);
+}
+
+.memorySpread .memoryPhoto--landscape {
+    max-width: min(58%, 520px);
+}
+
+.memorySpread--carmelita .memoryPhoto {
+    max-width: min(68%, 680px);
+}
+
+.memoryGroup {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem -50px 3rem;
+    width: calc(100% + 100px);
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.memoryGroup .memoryPhoto {
+    margin: 1.25rem 0;
+}
+
+.memoryGroup .memoryRow {
+    margin: 1rem 0;
+    width: 100%;
+    padding: 0;
+}
+
+.memoryPhoto {
+    margin: 2rem 0;
+    line-height: 0;
+}
+
+.memoryPhoto__btn {
+    display: block;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: zoom-in;
+    line-height: 0;
+}
+
+.memoryPhoto__btn:focus-visible {
+    outline: 2px solid rgba(56, 28, 43, 0.45);
+    outline-offset: 4px;
+}
+
+.memoryPhoto img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+.memoryPhoto--sm {
+    max-width: min(56vw, 350px);
+}
+
+.memoryPhoto--md {
+    max-width: min(70vw, 490px);
+}
+
+.memoryPhoto--lg {
+    max-width: min(84vw, 610px);
+}
+
+.memoryPhoto--xl {
+    max-width: min(96vw, 770px);
+}
+
+.memoryPhoto--hero {
+    max-width: min(96vw, 770px);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.memoryPhoto--left {
+    align-self: flex-start;
+    margin-left: -50px;
+    margin-right: auto;
+}
+
+.memoryPhoto--right {
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: -50px;
+}
+
+.memoryPhoto--center {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.memoryPhoto--hero.memoryPhoto--left {
+    margin-left: -50px;
+}
+
+.memoryPhoto--hero.memoryPhoto--right {
+    margin-right: -50px;
+}
+
+.memoryRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin: 2rem -50px;
+    width: calc(100% + 100px);
+    box-sizing: border-box;
+    padding: 0 50px;
+}
+
+.memoryRow--offset {
+    padding-left: calc(12% + 50px);
+}
+
+.memoryCluster {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.6rem;
+    align-items: start;
+    margin: 2rem -50px 3rem;
+    width: calc(100% + 100px);
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.memoryCluster .memoryPhoto {
+    margin: 0;
+}
+
+.memoryPhoto--landscape img,
+.memoryPhoto--portrait img {
+    max-height: none;
+}
+
+.memoryPhoto--solo {
+    margin: 2rem auto;
+    max-width: min(84vw, 640px);
+}
+
+.memoryCluster--brugmansia .memoryPhoto:nth-child(1) { grid-column: 1 / 8; }
+.memoryCluster--brugmansia .memoryPhoto:nth-child(2) { grid-column: 8 / 13; }
+
+.memoryZine {
+    max-width: 900px;
+    margin: 5rem auto 0;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(56, 28, 43, 0.12);
+}
+
+.memoryZineTitle {
+    margin: 0 0 2rem;
+    font-family: "EB Garamond", Garamond, "Times New Roman", serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.45rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: rgba(56, 28, 43, 0.85);
+}
+
+.memoryReveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 800ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.memoryReveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.memoryLightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    background: rgba(250, 249, 247, 0.97);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 220ms ease, visibility 220ms ease;
+    cursor: zoom-out;
+}
+
+.memoryLightbox.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.memoryLightbox__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    cursor: default;
+    box-shadow: 0 8px 40px rgba(56, 28, 43, 0.12);
+}
+
+.memoryLightbox__close {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    border: none;
+    background: transparent;
+    color: #381c2b;
+    font-size: 2.25rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    z-index: 101;
+}
+
+.memoryLightbox__close:hover {
+    opacity: 0.65;
+}
+
+body.memoryLightbox-open {
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 700px) {
+    .memoryMain {
+        padding: 5.5rem 1rem 8rem;
+    }
+
+    .memoryParagraph {
+        margin: 2rem 0;
+    }
+
+    .memorySpread,
+    .memoryCluster,
+    .memoryGroup {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .memorySpread--photo-left,
+    .memorySpread--photo-right {
+        flex-direction: column;
+    }
+
+    .memorySpread .memoryPhoto,
+    .memorySpread .memoryPhoto--portrait,
+    .memorySpread .memoryPhoto--landscape,
+    .memorySpread--carmelita .memoryPhoto {
+        max-width: 100%;
+    }
+
+    .memoryPhoto--sm,
+    .memoryPhoto--md,
+    .memoryPhoto--lg,
+    .memoryPhoto--xl,
+    .memoryPhoto--hero {
+        max-width: calc(100vw - 2rem);
+    }
+
+    .memoryPhoto--left,
+    .memoryPhoto--right,
+    .memoryPhoto--hero.memoryPhoto--left,
+    .memoryPhoto--hero.memoryPhoto--right {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .memoryPhoto--left,
+    .memoryPhoto--right,
+    .memoryPhoto--center {
+        align-self: center;
+    }
+
+    .memoryRow,
+    .memoryRow--offset,
+    .memoryGroup .memoryRow {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .memoryCluster {
+        grid-template-columns: 1fr;
+    }
+
+    .memoryCluster .memoryPhoto,
+    .memoryCluster--brugmansia .memoryPhoto {
+        grid-column: 1 / -1 !important;
+        grid-row: auto !important;
+    }
+
+    .memoryPhoto--solo {
+        max-width: 100%;
+    }
+
+    .memoryLightbox {
+        padding: 1rem;
+    }
+}

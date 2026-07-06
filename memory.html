@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<link href="https://db.onlinewebfonts.com/c/518a9ff6a44a4a8ef3753a6cc61b9395?family=Judson" rel="stylesheet">
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+</head>
+<title>memory - Jackie Marchal</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="components/footer.js" type="text/javascript" defer></script>
+<script src="script.js" type="text/javascript" defer></script>
+<body class="memoryPage">
+    <nav>
+        <div id="webNavBar">
+            <ul id="navUl">
+                <li id="webListen">
+                    <a target="_blank" rel="noopener noreferrer" href="https://share.amuse.io/album/jackie-marchal-as-is">listen</a>
+                    <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" height=".8em" viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+                    <ul class="dropdownMenu" id="webDropdownMenu" style="display: none;">
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/artist/0impl8NVq1NoLQssU18V1P?si=MXM3iY_8R2mOlsHIaUA1ZA">spotify</a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://music.apple.com/us/artist/jackie-marchal/1495174236">apple music</a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://jackiemarchal.bandcamp.com/">bandcamp (&lt;3)</a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://music.amazon.com/artists/B083Y1QSJG/jackie-marchal">amazon music</a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" href="https://music.youtube.com/browse/MPREb_gmrrWD3dsyq">youtube music</a></li>
+                    </ul>
+                </li>
+                <li><a href="/watch.html">watch</a></li>
+                <li class="logoContainer">
+                    <a href="/home.html">
+                        <img width="130" class="logo" alt="Jackie Marchal logo" src="assets/JMBlack.svg">
+                    </a>
+                </li>
+                <li><a href="/writing.html">read</a></li>
+                <li><a href="/bio.html">contact</a></li>
+            </ul>
+        </div>
+        <div id="mobileNavBar">
+            <div id="mobileLogo">
+                <a href="/home.html">
+                    <img width="120" alt="Jackie Marchal logo" src="assets/JMBlack.svg">
+                </a>
+                <svg onclick="toggleHamburger()" fill="currentColor" id="hamburger" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                </svg>
+                <ul class="navTransition" id="mobileUl" style="display:none;">
+                    <li class="listen">
+                        <a id="mobileListen">listen</a>
+                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" height=".4em" viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+                        <ul class="dropdownMenu" id="mobileDropdownMenu" style="display: none;">
+                            <li><a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/artist/0impl8NVq1NoLQssU18V1P?si=MXM3iY_8R2mOlsHIaUA1ZA">spotify</a></li>
+                            <li><a target="_blank" rel="noopener noreferrer" href="https://music.apple.com/us/artist/jackie-marchal/1495174236">apple music</a></li>
+                            <li><a target="_blank" rel="noopener noreferrer" href="https://jackiemarchal.bandcamp.com/">bandcamp</a></li>
+                            <li><a target="_blank" rel="noopener noreferrer" href="https://music.amazon.com/artists/B083Y1QSJG/jackie-marchal">amazon music</a></li>
+                            <li><a target="_blank" rel="noopener noreferrer" href="https://music.youtube.com/browse/MPREb_gmrrWD3dsyq">youtube music</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/writing.html">writing</a></li>
+                    <li><a href="/writing.html">read</a></li>
+                    <li><a href="/watch.html">watch</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="memoryMain">
+        <header class="memoryHeader memoryReveal">
+            <h1 class="memoryTitle">memory</h1>
+        </header>
+
+        <div class="memoryFlow">
+            <p class="memoryParagraph memoryReveal">[ paragraph 1 — your writing goes here ]</p>
+
+            <div class="memorySpread memorySpread--photo-right memoryReveal">
+                <div class="memorySpread__text">
+                    <p class="memoryParagraph">[ paragraph 2 ]</p>
+                </div>
+                <figure class="memoryPhoto memoryPhoto--left memoryPhoto--hero memoryReveal">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/home1.jpg" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+            </div>
+
+
+            <figure class="memoryPhoto memoryPhoto--sm">
+                <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                    <img src="assets/memory/home4.JPG" alt="" loading="lazy" decoding="async">
+                </button>
+            </figure>
+
+            <div class="memoryRow memoryReveal">
+                <figure class="memoryPhoto memoryPhoto--sm">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/home3.JPG" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+            </div>
+
+            <div class="memoryRow memoryRow--offset memoryReveal">
+                <figure class="memoryPhoto memoryPhoto--sm">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/home6.jpg" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+            </div>
+
+            <figure class="memoryPhoto memoryPhoto--center memoryPhoto--hero memoryReveal">
+                <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                    <img src="assets/memory/home7.jpg" alt="" loading="lazy" decoding="async">
+                </button>
+            </figure>
+
+            <p class="memoryParagraph memoryReveal">[ paragraph 3 ]</p>
+
+            <div class="memoryGroup memoryGroup--bvp memoryReveal" aria-label="bvp">
+                <figure class="memoryPhoto memoryPhoto--left memoryPhoto--lg">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/bvp1.jpg" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+
+                <figure class="memoryPhoto memoryPhoto--right memoryPhoto--md">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/bvp2.jpg" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+
+                <div class="memoryRow">
+                    <figure class="memoryPhoto memoryPhoto--sm">
+                        <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                            <img src="assets/memory/bvp4.jpg" alt="" loading="lazy" decoding="async">
+                        </button>
+                    </figure>
+                    <figure class="memoryPhoto memoryPhoto--md">
+                        <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                            <img src="assets/memory/bvp6.jpg" alt="" loading="lazy" decoding="async">
+                        </button>
+                    </figure>
+                </div>
+
+                <figure class="memoryPhoto memoryPhoto--center memoryPhoto--hero">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/bvp3.jpg" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+
+                <figure class="memoryPhoto memoryPhoto--right memoryPhoto--hero">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/bvp5.jpg" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+
+                <div class="memoryRow memoryRow--offset">
+                    <figure class="memoryPhoto memoryPhoto--sm">
+                        <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                            <img src="assets/memory/bvp7.jpg" alt="" loading="lazy" decoding="async">
+                        </button>
+                    </figure>
+                    <figure class="memoryPhoto memoryPhoto--lg">
+                        <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                            <img src="assets/memory/bvp8.JPG" alt="" loading="lazy" decoding="async">
+                        </button>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="memorySpread memorySpread--photo-right memoryReveal">
+                <div class="memorySpread__text">
+                    <p class="memoryParagraph">[ paragraph 4 ]</p>
+                </div>
+                <figure class="memoryPhoto memoryPhoto--portrait">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/corona1.jpg" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+            </div>
+
+            <figure class="memoryPhoto memoryPhoto--center memoryPhoto--hero memoryReveal">
+                <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                    <img src="assets/memory/corona2.jpg" alt="" loading="lazy" decoding="async">
+                </button>
+            </figure>
+
+            <div class="memoryRow memoryReveal">
+                <figure class="memoryPhoto memoryPhoto--lg">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/corona4.JPG" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+                <figure class="memoryPhoto memoryPhoto--md">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/corona5.JPG" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+            </div>
+
+            <figure class="memoryPhoto memoryPhoto--right memoryPhoto--md memoryReveal">
+                <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                    <img src="assets/memory/corona6.JPG" alt="" loading="lazy" decoding="async">
+                </button>
+            </figure>
+
+            <figure class="memoryPhoto memoryPhoto--center memoryPhoto--lg memoryReveal">
+                <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                    <img src="assets/memory/corona7.JPG" alt="" loading="lazy" decoding="async">
+                </button>
+            </figure>
+
+            <div class="memorySpread memorySpread--photo-left memorySpread--carmelita memoryReveal">
+                <div class="memorySpread__text">
+                    <p class="memoryParagraph">[ paragraph 5 ]</p>
+                </div>
+                <figure class="memoryPhoto memoryPhoto--lg">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/carmelita1.JPG" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+            </div>
+
+            <div class="memorySpread memorySpread--photo-right memoryReveal">
+                <div class="memorySpread__text">
+                    <p class="memoryParagraph">[ paragraph 6 ]</p>
+                </div>
+                <figure class="memoryPhoto memoryPhoto--landscape">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/brugmansia1.JPG" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+            </div>
+
+            <section class="memoryCluster memoryCluster--brugmansia memoryReveal" aria-label="brugmansia">
+                <figure class="memoryPhoto memoryPhoto--landscape">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/brugmansia2.JPG" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+                <figure class="memoryPhoto memoryPhoto--portrait">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/brugmansia3.jpeg" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+            </section>
+
+            <div class="memorySpread memorySpread--photo-right memoryReveal">
+                <div class="memorySpread__text">
+                    <p class="memoryParagraph">[ paragraph 8 ]</p>
+                    <p class="memoryParagraph">[ paragraph 9 ]</p>
+                </div>
+                <figure class="memoryPhoto memoryPhoto--portrait">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/duboce1.jpg" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+            </div>
+
+            <figure class="memoryPhoto memoryPhoto--landscape memoryPhoto--solo memoryReveal">
+                <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                    <img src="assets/memory/duboce2.jpg" alt="" loading="lazy" decoding="async">
+                </button>
+            </figure>
+
+            <div class="memorySpread memorySpread--photo-left memoryReveal">
+                <div class="memorySpread__text">
+                    <p class="memoryParagraph">[ paragraph 7 ]</p>
+                </div>
+                <figure class="memoryPhoto memoryPhoto--portrait">
+                    <button type="button" class="memoryPhoto__btn" aria-label="View full screen">
+                        <img src="assets/memory/5way.jpg" alt="" loading="lazy" decoding="async">
+                    </button>
+                </figure>
+            </div>
+        </div>
+
+        <section class="memoryZine memoryReveal" aria-label="zine">
+            <h2 class="memoryZineTitle">in the time it's taken to write this, it's become a memory zine</h2>
+            <a href="https://online.flippingbook.com/view/515438226/" class="fbo-embed" data-fbo-id="ce35808c56" data-fbo-ratio="3:2" data-fbo-lightbox="yes" data-fbo-width="100%" data-fbo-height="auto" data-fbo-version="1" data-fbo-transparent style="max-width: 100%">Combined PDF</a>
+            <script async defer src="https://online.flippingbook.com/EmbedScriptUrl.aspx?m=redir&hid=515438226"></script>
+        </section>
+    </main>
+
+    <div class="memoryLightbox" id="memoryLightbox" aria-hidden="true">
+        <button type="button" class="memoryLightbox__close" aria-label="Close full screen image">&times;</button>
+        <img class="memoryLightbox__img" src="" alt="">
+    </div>
+
+    <footer-component theme="dark"></footer-component>
+
+    <script>
+        (function () {
+            const reveals = document.querySelectorAll('.memoryReveal');
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('is-visible');
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    },
+                    { root: null, rootMargin: '0px 0px -6% 0px', threshold: 0.06 }
+                );
+                reveals.forEach((el) => observer.observe(el));
+            } else {
+                reveals.forEach((el) => el.classList.add('is-visible'));
+            }
+
+            const lightbox = document.getElementById('memoryLightbox');
+            const lightboxImg = lightbox.querySelector('.memoryLightbox__img');
+            const closeBtn = lightbox.querySelector('.memoryLightbox__close');
+
+            function openLightbox(src) {
+                lightboxImg.src = src;
+                lightbox.classList.add('is-open');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('memoryLightbox-open');
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('is-open');
+                lightbox.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('memoryLightbox-open');
+                lightboxImg.removeAttribute('src');
+            }
+
+            document.querySelectorAll('.memoryPhoto__btn').forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const img = btn.querySelector('img');
+                    if (img && img.src) {
+                        openLightbox(img.currentSrc || img.src);
+                    }
+                });
+            });
+
+            closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (event) => {
+                if (event.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+                    closeLightbox();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
